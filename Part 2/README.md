@@ -26,6 +26,16 @@ pip3 install opencv-python
   <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image/tesla.jpg" width=500> 
 </p>
 
+### Images in a sequencial order to video(avi.file)
+<p align="middle">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image_to_video.png" width=500> 
+</p>
+
+## Task 2
+- Develop a queue system that can exercise your requirements with stub functions
+- Develop the twitter functionality with an API
+- Integrate them
+- Create a queue system(First in first out) and create 4 threads to complete the task(different API call)
 
 
 
