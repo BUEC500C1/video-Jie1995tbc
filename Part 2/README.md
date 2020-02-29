@@ -18,7 +18,14 @@ pip3 install opencv-python
 ## Result
 ### Background image
 <p align="middle">
-  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image/start.jpg" width=300> 
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image/start.jpg" width=500> 
 </p>
-### After converting text into image
+
+### After converting text(twitter feeds) into image 
+<p align="middle">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image/tesla.jpg" width=500> 
+</p>
+
+
+
 
