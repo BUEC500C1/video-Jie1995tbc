@@ -15,8 +15,10 @@ pip install Pillow
 ```
 pip3 install opencv-python
 ```
-
+## Result
 ### Background image
 <p align="middle">
-  <img src= "">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/image/start.jpg" width=300> 
 </p>
+### After converting text into image
+
