@@ -37,7 +37,7 @@ pip3 install opencv-python
 - Integrate them
 - Create a queue system(First in first out) and create 4 threads to complete the task(different API call)[source code]
 
-[source code]:"https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/queen_sy.py"
+[source code]:https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%202/queen_sy.py
 
 
 
