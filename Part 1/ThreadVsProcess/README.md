@@ -6,9 +6,18 @@
 ```
 - Using gnuplot to plot. The screenshot of the source code as the below
 
-![imageCode1](https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%201/ThreadVsProcess/gnuplot_code1.png)
-![imageCode2](https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%201/ThreadVsProcess/gnuplot_code2.png)
+<p align="middle">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%201/ThreadVsProcess/gnuplot_code1.png" width= 500>
+</p>
 
+
+<p align="middle">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%201/ThreadVsProcess/gnuplot_code2.png" width= 500>
+</p>
+
+<p align="middle">
+  <img src= "https://github.com/BUEC500C1/video-Jie1995tbc/blob/master/Part%201/ThreadVsProcess/ThreadVsProcess.png" width= 500>
+</p>
 
 
 
