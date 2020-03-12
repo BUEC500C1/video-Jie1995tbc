@@ -1,24 +1,30 @@
 import tweepy
+import os
 import re
 from PIL import Image, ImageDraw, ImageFont
+import configparser
+import json
+
+
 
 def tweets_get(key):
     '''Get the text from twitter using tweepy and convert text into image'''
+    config = configparser.ConfigParser()
+    file = 'keys'
+    if os.path.exists(file) :
+        config.read(file)
+        auth = tweepy.OAuthHandler(config.get('auth', 'consumer_key').strip(), config.get('auth', 'consumer_secret').strip())
+        auth.set_access_token(config.get('auth', 'access_token').strip(), config.get('auth', 'access_token_secret').strip())
+        api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
+        public_tweets = api.user_timeline(key)
+        with open("data.json","w") as f:
 
+            json.dump(public_tweets,f)
+    else :
+        with open('data.json', 'r') as f:
+            public_tweets = json.load(f)
 
-    consumer_key = 'BePXBQnnodwym2KOVSVaDGMJt'
-    consumer_secret = 'vj4G9SYGRzHWZLwHoHtsUjqeBNgQQY7q4FFPnxs3SkTDGfaQ7E'
-    access_token = '1171640747352842244-WPkonJaaXqQFSDJPwyT218uYW6WsSO'
-    access_token_secret = 'izFind6UV5DghAsQLdXxoo2TVpks7hv8mJ5lEKG32r0Kl'
-
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-
-    api = tweepy.API(auth)
-
-    public_tweets = api.search(q=key, count=10)
     setFont = ImageFont.truetype('/Library/Fonts/Arial.ttf', 50)
-
     count = 0;
     color = "#000000"
     header_y = 500
@@ -30,20 +36,24 @@ def tweets_get(key):
 
     for tweets in public_tweets:
         gap = '\n'
-        list_contain_tweets = list(tweets.text)
+        for key, value in tweets.items():
+            if key == 'text':
+                list_contain_tweets = list(value)
+        #list_contain_tweets = list(tweets.text)
+
         for n in range(len(list_contain_tweets)):
             if (n % 60 == 0):
                 list_contain_tweets.insert(n, gap)
 
-        tweets.text = ''.join(list_contain_tweets)
-        tweets.text = re.sub("#", r'\#', tweets.text)
-        tweets.text = re.sub("@", r'\@', tweets.text)
-        tweets.text = re.sub('\n', '', tweets.text)
+        tweets_text = ''.join(list_contain_tweets)
+        tweets_text = re.sub("#", r'\#', tweets_text)
+        tweets_text = re.sub("@", r'\@', tweets_text)
+        tweets_text = re.sub('\n', '', tweets_text)
 
-        tweets.text = tweets.text + '\n'
-        tweets_contain.append(tweets.text)
+        # tweets.text = tweets.text + '\n'
+        tweets_contain.append(tweets_text)
 
-        print(tweets.text)
+        print(tweets_text)
 
 
     for num, content in enumerate(tweets_contain):
